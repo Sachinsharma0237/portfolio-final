@@ -18,11 +18,11 @@ const About = () => {
           </p>
 
           <a
-            href="https://drive.google.com/file/d/1U-4qd7IVHXcLGepRr-QQ9_xKVhRklDeS/view?usp=sharing"
+            href="https://drive.google.com/file/d/1_1o4yr11Z1o9RJXjumFYiFsnKbABsHLk/view?usp=sharing"
             className="button button--flex"
             target="_blank"
           >
-            Download CV
+            Download Résumé
             <svg
               class="button__icon"
               xmlns="http://www.w3.org/2000/svg"

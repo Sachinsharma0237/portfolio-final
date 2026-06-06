@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
+import homeIcon from "../../assets/files.svg";
 
 const Header = () => {
   /* =====================Change Background Header================== */
@@ -17,7 +18,57 @@ const Header = () => {
     <header className="header">
       <nav className="nav container">
         <a href="index.html" className="nav__logo">
-          Sachin
+          <svg
+            width="150"
+            height="80"
+            viewBox="0 0 400 80"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="leftBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E5E7EB" />
+                <stop offset="100%" stop-color="#D1D5DB" />
+              </linearGradient>
+            </defs>
+
+            <rect
+              x="1"
+              y="1"
+              width="398"
+              height="78"
+              rx="12"
+              fill="#FFFFFF"
+              stroke="#C0C0C0"
+              stroke-width="2"
+            />
+
+            <polygon points="0,0 120,0 90,80 0,80" fill="url(#leftBg)" />
+
+            <text
+              x="50"
+              y="55"
+              text-anchor="middle"
+              font-family="Georgia, serif"
+              font-size="42"
+              font-weight="bold"
+              fill="#111111"
+            >
+              SS
+            </text>
+
+            <text
+              x="240"
+              y="52"
+              text-anchor="middle"
+              font-family="Arial, Helvetica, sans-serif"
+              font-size="28"
+              font-style="italic"
+              font-weight="700"
+              fill="#111111"
+            >
+              SACHIN SHARMA
+            </text>
+          </svg>
         </a>
 
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
@@ -62,20 +113,6 @@ const Header = () => {
 
             <li className="nav__item">
               <a
-                href="#services"
-                onClick={() => setActiveNav("#services")}
-                className={
-                  activeNav === "#services"
-                    ? "nav__link active-link"
-                    : "nav__link"
-                }
-              >
-                <i className="uil uil-briefcase-alt nav__icon"></i>Services
-              </a>
-            </li>
-
-            <li className="nav__item">
-              <a
                 href="#portfolio"
                 onClick={() => setActiveNav("#portfolio")}
                 className={
@@ -99,6 +136,20 @@ const Header = () => {
                 }
               >
                 <i className="uil uil-scenery nav__icon"></i>Products
+              </a>
+            </li>
+
+            <li className="nav__item">
+              <a
+                href="#services"
+                onClick={() => setActiveNav("#services")}
+                className={
+                  activeNav === "#services"
+                    ? "nav__link active-link"
+                    : "nav__link"
+                }
+              >
+                <i className="uil uil-briefcase-alt nav__icon"></i>Services
               </a>
             </li>
 

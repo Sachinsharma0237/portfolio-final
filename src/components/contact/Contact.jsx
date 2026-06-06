@@ -25,11 +25,11 @@ const Contact = () => {
         title: "Thank You!",
         html: `
     <p>I have received your project details.</p>
-    <p>I'll review them and contact you shortly.</p>
+    <p>I'll review it and contact you shortly.</p>
     <p><strong>Thanks for reaching out!</strong></p>
   `,
         confirmButtonText: "Great!",
-        timer: 5000,
+        timer: 10000,
         timerProgressBar: true,
       });
 
@@ -109,7 +109,7 @@ const Contact = () => {
 
           <form ref={form} onSubmit={sendEmail} className="contact__form">
             <div className="contact__form-div">
-              <label className="contact__form-tag">Name</label>
+              <label className="contact__form-tag">Name*</label>
 
               <input
                 type="text"
@@ -121,19 +121,31 @@ const Contact = () => {
             </div>
 
             <div className="contact__form-div">
-              <label className="contact__form-tag">Email</label>
+              <label className="contact__form-tag">Email*</label>
 
               <input
                 type="email"
                 name="email"
                 className="contact__form-input"
-                placeholder="Please write your email"
+                placeholder="Please write your email id"
                 required
               />
             </div>
 
+            <div className="contact__form-div">
+              <label className="contact__form-tag">Phone No.</label>
+
+              <input
+                type="tel"
+                name="phone"
+                className="contact__form-input"
+                placeholder="+91 9540360365"
+                pattern="^\+?[1-9]\d{6,14}$"
+              />
+            </div>
+
             <div className="contact__form-div contact__form-area">
-              <label className="contact__form-tag">Project</label>
+              <label className="contact__form-tag">Project*</label>
 
               <textarea
                 name="project"
